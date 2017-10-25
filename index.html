@@ -11,9 +11,11 @@
             <button  id="valider" name ="valider" onclick="multiply()">Valider</button>
             <script type="text/javascript">
             function multiply() {
-              var nombreUn = document.getElementById('premier_nombre');
-              var nombreDeux = document.getElementById('deuxieme_nombre');
-              alert(parseInt(nombreUn.value) * parseInt(nombreDeux.value));
+              var nombreUn = document.getElementById('premier_nombre').value;
+              var nombreDeux = document.getElementById('deuxieme_nombre').value;
+              if(isNaN(nombreUn) == false && isNaN(nombreDeux) == false){
+                alert(Math.trunc(nombreUn) * parseInt(nombreDeux));
+              }
             }
             </script>
         </form>
